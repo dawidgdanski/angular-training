@@ -1,13 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-zippy',
+  selector: 'zippy',
   templateUrl: './zippy.component.html',
   styleUrls: ['./zippy.component.less']
 })
 export class ZippyComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  title: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
