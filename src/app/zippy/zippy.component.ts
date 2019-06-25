@@ -1,28 +1,24 @@
-import {AfterContentInit, Component, ContentChild, ElementRef, Input, OnInit} from '@angular/core';
-import {ExampleDirective} from '../example.directive';
+import {AfterViewInit, Component, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'zippy',
   templateUrl: './zippy.component.html',
   styleUrls: ['./zippy.component.less']
 })
-export class ZippyComponent implements OnInit, AfterContentInit {
+export class ZippyComponent implements AfterViewInit {
 
   @Input()
   title: string;
 
-  @ContentChild(ExampleDirective, {read: ElementRef})
-  private content: ElementRef;
+  @ViewChild('summary', {read: ElementRef})
+  summaryText: ElementRef;
 
-  constructor() {
+  constructor(private element: ElementRef) {
+
   }
 
-  ngOnInit(): void {
-  }
-
-  ngAfterContentInit(): void {
-    if (this.content) {
-      console.log(this.content.nativeElement.innerText);
-    }
+  ngAfterViewInit(): void {
+    console.log(this.element.nativeElement.innerText);
+    this.summaryText.nativeElement.innerText = this.element.nativeElement.innerText
   }
 }

@@ -3,13 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ZippyComponent } from './zippy/zippy.component';
-import { ExampleDirective } from './example.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZippyComponent,
-    ExampleDirective
+    ZippyComponent
   ],
   imports: [
     BrowserModule
