@@ -1,10 +1,16 @@
 <div class="list-item-layout">
-  <div class="list-item-header">
+  <div [ngClass]="{
+      'list-item-header-expanded':isItemExpanded,
+      'list-item-header-collapsed':!isItemExpanded}"
+       (click)="onItemStateChanged(!isItemExpanded)">
+
     <h1 class="header-text">{{title}}</h1>
-    <i *ngIf="isItemCollapsed" class="fa fa-chevron-down fa-2x" (click)="onIconClicked(!isItemCollapsed)"></i>
-    <i *ngIf="!isItemCollapsed" class="fa fa-chevron-up fa-2x" (click)="onIconClicked(!isItemCollapsed)"></i>
+
+    <i *ngIf="isItemExpanded" class="fa fa-chevron-up fa-2x"></i>
+    <i *ngIf="!isItemExpanded" class="fa fa-chevron-down fa-2x"></i>
   </div>
-  <div *ngIf="isItemCollapsed" class="list-item-summary">
+
+  <div *ngIf="isItemExpanded" class="list-item-summary">
     <p class="summary-text">
       <ng-content></ng-content>
     </p>

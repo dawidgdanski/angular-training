@@ -10,9 +10,9 @@ export class ZippyComponent {
   @Input()
   title: string;
 
-  isItemCollapsed: boolean = false;
+  isItemExpanded: boolean = false;
 
-  onIconClicked(isItemCollapsed: boolean) {
-    this.isItemCollapsed = isItemCollapsed;
+  onItemStateChanged(isItemExpanded: boolean) {
+    this.isItemExpanded = isItemExpanded;
   }
 }
