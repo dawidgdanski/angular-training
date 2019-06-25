@@ -10,7 +10,9 @@ export class ZippyComponent {
   @Input()
   title: string;
 
-  constructor() {
+  isItemCollapsed: boolean = false;
 
+  onIconClicked(isItemCollapsed: boolean) {
+    this.isItemCollapsed = isItemCollapsed;
   }
 }
