@@ -1,13 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { ZippyComponent } from './zippy/zippy.component';
+import {AppComponent} from './app.component';
+import {ZippyComponent} from './zippy/zippy.component';
+import {LikeComponent} from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZippyComponent
+    ZippyComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +17,5 @@ import { ZippyComponent } from './zippy/zippy.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
