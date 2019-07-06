@@ -1,12 +1,18 @@
 <form>
   <div class="form-group">
     <label for="course">Course name</label>
-    <input ngModel name="course" #course="ngModel" (change)="logCourseInputChange(course)" id="course" type="text" class="form-control">
+    <input ngModel name="course" required
+           #course="ngModel" (change)="logCourseInputChange(course)"
+           id="course" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="!course.valid">Course name is required</div>
   </div>
 
   <div class="form-group">
     <label for="category">Course category</label>
-    <input ngModel name ="category" #category="ngModel" (change)="logCategoryInputChange(category)" id="category" type="text" class="form-control">
+    <input ngModel name="category" required
+           #category="ngModel" (change)="logCategoryInputChange(category)"
+           id="category" type="text" class="form-control">
+    <div class="alert alert-danger" *ngIf="!category.valid">Course category is required</div>
   </div>
 
   <button class="btn btn-primary">Submit</button>
