@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {NgModel} from '@angular/forms';
+import {NgForm, NgModel} from '@angular/forms';
 
 @Component({
   selector: 'example-form',
@@ -20,5 +20,9 @@ export class ExampleFormComponent implements OnInit {
 
   logCategoryInputChange(category: NgModel) {
     console.log(category);
+  }
+
+  submit(formElement: NgForm) {
+    console.log(formElement);
   }
 }
