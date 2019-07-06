@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {ZippyComponent} from './zippy/zippy.component';
 import {LikeComponent} from './like/like.component';
 import { ExampleFormComponent } from './example-form/example-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExampleFormComponent } from './example-form/example-form.component';
     ExampleFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

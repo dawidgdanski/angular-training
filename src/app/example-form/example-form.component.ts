@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NgModel} from '@angular/forms';
 
 @Component({
   selector: 'example-form',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExampleFormComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  logCourseInputChange(course: NgModel) {
+    console.log(course);
+  }
+
+  logCategoryInputChange(category: NgModel) {
+    console.log(category);
+  }
 }
