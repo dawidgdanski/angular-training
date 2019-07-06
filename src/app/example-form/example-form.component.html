@@ -6,7 +6,9 @@
            id="course" type="text" class="form-control">
     <div class="alert alert-danger" *ngIf="course.touched && !course.valid">
       <div *ngIf="course.errors.required">Course name is required</div>
-      <div *ngIf="course.errors.minlength">Course name must be longer than 2 characters</div>
+      <div *ngIf="course.errors.minlength">Course name must be longer at
+        least {{course.errors.minlength.requiredLength}} characters long.
+      </div>
       <div *ngIf="course.errors.pattern">Course name does not match the pattern</div>
     </div>
   </div>
