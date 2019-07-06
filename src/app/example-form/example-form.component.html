@@ -12,14 +12,13 @@
       </div>
       <div *ngIf="courseName.errors.pattern">Course name does not match the pattern</div>
     </div>
-  </div>
-
-  <div class="form-group">
-    <label for="category">Course category</label>
-    <input ngModel name="category" required
-           #category="ngModel" (change)="logCategoryInputChange(category)"
-           id="category" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="category.touched && !category.valid">Course category is required</div>
+    <div class="form-group">
+      <label for="category">Course category</label>
+      <input ngModel name="category" required
+             #category="ngModel" (change)="logCategoryInputChange(category)"
+             id="category" type="text" class="form-control">
+      <div class="alert alert-danger" *ngIf="category.touched && !category.valid">Course category is required</div>
+    </div>
   </div>
 
   <button class="btn btn-primary">Submit</button>
