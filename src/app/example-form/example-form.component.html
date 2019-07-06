@@ -18,7 +18,7 @@
               #category="ngModel" (change)="logCategoryInputChange(category)"
               id="category" type="text" class="form-control">
         <option></option>
-        <option *ngFor="let courseType of courseTypes" [value]="courseType.id">{{courseType.name}}</option>
+        <option *ngFor="let courseType of courseTypes" [ngValue]="courseType">{{courseType.name}}</option>
       </select>
       <div class="alert alert-danger" *ngIf="category.touched && !category.valid">Course category is required</div>
     </div>
