@@ -8,6 +8,11 @@ import {NgForm, NgModel} from '@angular/forms';
 })
 export class ExampleFormComponent implements OnInit {
 
+  courseTypes = [
+    {id: 1, name: 'Type 1'},
+    {id: 2, name: 'Type 2'}
+  ];
+
   constructor() {
   }
 
