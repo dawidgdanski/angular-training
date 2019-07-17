@@ -1,26 +1,27 @@
 <form #formElement="ngForm" (ngSubmit)="submit(formElement)">
   <div class="form-group">
-    <div ngModelGroup="course" #course="ngModelGroup"></div>
-    <label for="courseName">Course name</label>
-    <input ngModel name="courseName" required minlength="3" pattern="fancy"
-           #courseName="ngModel" (change)="logCourseInputChange(courseName)"
-           id="courseName" type="text" class="form-control">
-    <div class="alert alert-danger" *ngIf="courseName.touched && !courseName.valid">
-      <div *ngIf="courseName.errors.required">Course name is required</div>
-      <div *ngIf="courseName.errors.minlength">Course name must be longer at
-        least {{courseName.errors.minlength.requiredLength}} characters long.
+    <div ngModelGroup="course" #course="ngModelGroup">
+      <label for="courseName">Course name</label>
+      <input ngModel name="courseName" required minlength="3" pattern="fancy"
+             #courseName="ngModel" (change)="logCourseInputChange(courseName)"
+             id="courseName" type="text" class="form-control">
+      <div class="alert alert-danger" *ngIf="courseName.touched && !courseName.valid">
+        <div *ngIf="courseName.errors.required">Course name is required</div>
+        <div *ngIf="courseName.errors.minlength">Course name must be longer at
+          least {{courseName.errors.minlength.requiredLength}} characters long.
+        </div>
+        <div *ngIf="courseName.errors.pattern">Course name does not match the pattern</div>
       </div>
-      <div *ngIf="courseName.errors.pattern">Course name does not match the pattern</div>
-    </div>
-    <div class="form-group">
-      <label for="category">Course category</label>
-      <select ngModel name="category" required
-              #category="ngModel" (change)="logCategoryInputChange(category)"
-              id="category" type="text" class="form-control">
-        <option></option>
-        <option *ngFor="let courseType of courseTypes" [ngValue]="courseType">{{courseType.name}}</option>
-      </select>
-      <div class="alert alert-danger" *ngIf="category.touched && !category.valid">Course category is required</div>
+      <div class="form-group">
+        <label for="category">Course category</label>
+        <select ngModel name="category" required
+                #category="ngModel" (change)="logCategoryInputChange(category)"
+                id="category" type="text" class="form-control">
+          <option></option>
+          <option *ngFor="let courseType of courseTypes" [ngValue]="courseType">{{courseType.name}}</option>
+        </select>
+        <div class="alert alert-danger" *ngIf="category.touched && !category.valid">Course category is required</div>
+      </div>
     </div>
   </div>
   <p>
