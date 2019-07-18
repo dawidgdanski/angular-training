@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-password-change',
+  selector: 'password-change',
   templateUrl: './password-change.component.html',
   styleUrls: ['./password-change.component.less']
 })
 export class PasswordChangeComponent implements OnInit {
 
-  form //= new FormGroup({
+  form: FormGroup; //= new FormGroup({
   //   passwords: new FormGroup({
   //     oldPassword: new FormControl(),
   //     newPassword: new FormControl(),
