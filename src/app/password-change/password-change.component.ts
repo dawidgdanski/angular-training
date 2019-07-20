@@ -18,15 +18,24 @@ export class PasswordChangeComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      passwords: fb.group({
-        oldPassword: ['', Validators.required],
-        newPassword: ['', Validators.required],
-        confirmPassword: ['', Validators.required]
-      })
+      oldPassword: ['', Validators.required],
+      newPassword: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
     });
   }
 
   ngOnInit() {
   }
 
+  get newPassword() {
+    return this.form.get('newPassword')
+  }
+
+  get oldPassword() {
+    return this.form.get('oldPassword')
+  }
+
+  get confirmPassword() {
+    return this.form.get('confirmPassword')
+  }
 }
