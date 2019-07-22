@@ -18,7 +18,7 @@ export class PasswordChangeComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      oldPassword: ['', Validators.required],
+      oldPassword: ['', [Validators.required, Validators.minLength(5)]],
       newPassword: ['', Validators.required],
       confirmPassword: ['', Validators.required]
     });
