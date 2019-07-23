@@ -39,4 +39,10 @@ export class PasswordChangeComponent implements OnInit {
   get confirmPassword() {
     return this.form.get('confirmPassword')
   }
+
+  changePassword() {
+    if(this.newPassword.valid) {
+      this.confirmPassword.setValue("SIEMA")
+    }
+  }
 }
