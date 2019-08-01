@@ -4,10 +4,11 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {ZippyComponent} from './zippy/zippy.component';
 import {LikeComponent} from './like/like.component';
-import { ExampleFormComponent } from './example-form/example-form.component';
+import {ExampleFormComponent} from './example-form/example-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { PasswordChangeComponent } from './password-change/password-change.component';
-import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
+import {PasswordChangeComponent} from './password-change/password-change.component';
+import {NewCourseFormComponent} from './new-course-form/new-course-form.component';
+import {NavBarComponent} from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
     LikeComponent,
     ExampleFormComponent,
     PasswordChangeComponent,
-    NewCourseFormComponent
+    NewCourseFormComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
