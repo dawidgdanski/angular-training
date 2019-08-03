@@ -16,6 +16,8 @@ import {LikeDemoComponent} from './like-demo/like-demo.component';
 import {PasswordChangeDemoComponent} from './password-change-demo/password-change-demo.component';
 import {ExampleFormDemoComponent} from './example-form-demo/example-form-demo.component';
 import {NewCourseDemoComponent} from './new-course-demo/new-course-demo.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowingComponent } from './github-following/github-following.component';
 
 const appRoutes: Routes = [
   {path: 'zippy', component: ZippyDemoComponent},
@@ -40,7 +42,9 @@ const appRoutes: Routes = [
     LikeDemoComponent,
     PasswordChangeDemoComponent,
     ExampleFormDemoComponent,
-    NewCourseDemoComponent
+    NewCourseDemoComponent,
+    GithubFollowersComponent,
+    GithubFollowingComponent
   ],
   imports: [
     BrowserModule,
