@@ -18,6 +18,7 @@ import {ExampleFormDemoComponent} from './example-form-demo/example-form-demo.co
 import {NewCourseDemoComponent} from './new-course-demo/new-course-demo.component';
 import {GithubFollowersComponent} from './github-followers/github-followers.component';
 import {GithubFollowingComponent} from './github-following/github-following.component';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'zippy', component: ZippyDemoComponent},
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

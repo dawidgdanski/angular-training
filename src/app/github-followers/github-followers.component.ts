@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HttpService} from '../service/http.service';
 
 @Component({
   selector: 'app-github-followers',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubFollowersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) {
+    
+  }
 
   ngOnInit() {
   }
